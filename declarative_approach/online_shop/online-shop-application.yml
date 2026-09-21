@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/kp0220/argocd_apps.git
     targetRevision: main
-    path: k8s-manifest
+    path: declarative_approach/online_shop
 
   destination:
     server: argocd-cluster
