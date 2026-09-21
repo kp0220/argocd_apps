@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: online-shop
+
+azureuser@docker-images:~/projects/argocd_app_onlineshop/argocd_apps/k8s-manifest$ cat online-shop-deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: online-shop
+  template:
+    metadata:
+      labels:
+        app: online-shop
+    spec:
+      containers:
+      - name: online-shop
+        image: amitabhdevops/online_shop:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
