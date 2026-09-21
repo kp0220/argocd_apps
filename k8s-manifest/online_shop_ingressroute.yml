@@ -1,0 +1,20 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: online-shop
+  namespace: default
+
+spec:
+  entryPoints:
+    - websecure
+
+  routes:
+    - match: Host(`app.yogifoods.store`)
+      kind: Rule
+
+      services:
+        - name: online-shop-service
+          port: 3000
+
+  tls:
+    secretName: online-shop-tls
