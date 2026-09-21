@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: online-shop-tls
-  namespace: default
+  namespace: online-shop
 spec:
   secretName: online-shop-tls
 
