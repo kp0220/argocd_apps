@@ -9,9 +9,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/LondheShubham153/argocd-demos.git
+    repoURL: https://github.com/kp0220/argocd_apps.git
     targetRevision: main
-    path: declarative_approach/online_shop
+    path: k8s-manifest
 
   destination:
     server: argocd-cluster
