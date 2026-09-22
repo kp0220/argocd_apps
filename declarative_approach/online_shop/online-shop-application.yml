@@ -14,7 +14,7 @@ spec:
     path: declarative_approach/online_shop
 
   destination:
-    server: argocd-cluster
+    server: https://172.18.0.4:6443
     namespace: online-shop
 
   syncPolicy:
